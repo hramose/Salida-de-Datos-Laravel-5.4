@@ -11,10 +11,28 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*
+| Bloque de rutas del frontend, el usuario al entrar al home 
+| encontrará un listado de productos y en el podrá hacer
+| clic y ver el detalle, tenemos la ruta / y productos
+*/
+Route::get('/', 'Frontend\PageController@index')->name('home');
+Route::get('/productos/{id}', 'Frontend\PageController@product')->name('product');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'Backend\HomeController@index');

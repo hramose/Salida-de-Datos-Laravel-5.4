@@ -14,4 +14,9 @@ class Product extends Model
     {
     	return $this->belongsTo(User::class);
     }
+
+    public function getTextShortAttribute()
+    {
+    	return substr($this->short, 0, 80) . '...';
+    }
 }
