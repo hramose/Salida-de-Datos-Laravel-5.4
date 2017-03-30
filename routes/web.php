@@ -19,20 +19,10 @@
 Route::get('/', 'Frontend\PageController@index')->name('home');
 Route::get('/productos/{id}', 'Frontend\PageController@product')->name('product');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Function de laravel para el sistema de registro
 Auth::routes();
 
+//Backend
 Route::get('/home', 'Backend\HomeController@index');
+
+Route::get('/listado-productos', 'Backend\ProductController@index')->name('listProducts');
