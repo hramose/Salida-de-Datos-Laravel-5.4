@@ -26,3 +26,5 @@ Auth::routes();
 Route::get('/home', 'Backend\HomeController@index');
 
 Route::get('/listado-productos', 'Backend\ProductController@index')->name('listProducts');
+Route::get('/listado-pdf', 'Backend\ProductController@pdf')->name('pdf');
+Route::get('/listado-xls', 'Backend\ProductController@xls')->name('xls');

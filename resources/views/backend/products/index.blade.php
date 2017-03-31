@@ -43,6 +43,13 @@
 					</table>
 					@if($paginate)
 						{!! $products->render() !!}
+					@else
+					<div class="btn-group" role="group">
+                        <a href="{{ route('pdf') }}" class="btn btn-default">
+                            PDF
+                        </a>
+                      <a href="{{ route('xls') }}" class="btn btn-default">XLS</a>
+                    </div>
 					@endif
                 </div>
             </div>
